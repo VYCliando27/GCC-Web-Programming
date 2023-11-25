@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Poppins:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Montserrat:wght@600;700;900&family=Poppins:ital,wght@1,200&display=swap');
+
+
+.myBG {
+    height: 100vh;
+    background: url("../assets/images/bg-web-wisata.png");
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+/* navbar-page start */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    background-color: hsla(0, 0%, 100%, 0.2);
+
+}
+
+.fontNavLink {
+    font-family: 'kalam', 'cursive';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 23px;
+}
+/* navbar-page start */
+
+
+
+/* home-page start */
+.bgHome {
+    background-color: hsla(0, 0%, 100%, 0.4);
+    height: 100vh;
+
+}
+.container-home {
+    padding-top: 100px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 50px;
+    text-shadow: 2px 2px rgb(224, 224, 224);
+}
+
+.text2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    text-shadow: 2px 2px rgb(224, 224, 224);
+}
+
+.text3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    text-shadow: 2px 2px rgb(224, 224, 224);
+    font-weight: 900;
+}
+
+.container-sosmed {
+    margin-top: 20px;
+}
+
+.sosmed1 {
+    width: 30px;
+}
+
+.sosmed2 {
+    width: 30px;
+    margin: 10px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide1 {
+    width: 190px;
+    height: 330px;
+    border-radius: 20px;
+    margin: 10px;    
+}
+
+.slide2 {
+    width: 160px;
+    height: 300px;
+    border-radius: 20px;
+    margin: 10px;    
+}
+
+.slide3 {
+    width: 160px;
+    height: 300px;
+    border-radius: 20px;
+    margin: 10px;    
+}
+
+.btn-home {
+    display: flex;
+    padding-left: 650px;
+}
+
+
+/* home-page end */
