@@ -11,34 +11,31 @@ const PlacesPage = () => {
               <Carousel.Item >
                 <img src={places1} alt="gambar1" className='custom-img'/>
                 <Carousel.Caption>
-                  <h3>First slide label</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  <h3>Aston Hills</h3>
+ 
                 </Carousel.Caption>
               </Carousel.Item>
 
               <Carousel.Item>
               <img src={places2} alt="gambar2"  className='custom-img'/>
                 <Carousel.Caption>
-                  <h3>Second slide label</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h3>Danau Tondano</h3>
+
                 </Carousel.Caption>
               </Carousel.Item>
 
               <Carousel.Item>
               <img src={places3} alt="gambar3" className='custom-img'/>
                 <Carousel.Caption>
-                  <h3>Third slide label</h3>
-                  <p>
-                    Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                  </p>
+                  <h3>Danau Linau</h3>
                 </Carousel.Caption>
               </Carousel.Item>
 
               <Carousel.Item>
                 <img src={places6} alt="gambar6"className='custom-img'/>
                 <Carousel.Caption>
-                  <h3>First slide label</h3>
-                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  <h3>Rumah Belanda</h3>
+                  
                 </Carousel.Caption>
               </Carousel.Item>
              </Carousel>
