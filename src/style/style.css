@@ -114,3 +114,13 @@
 
 
 /* home-page end */
+
+/* CSS 3d object */
+.canvas-container {
+    width: 100vw;   /* Viewport width */
+    height: 100vh;  /* Viewport height */
+    overflow: hidden;
+  }
+
+
+/* End CSS 3d Object */

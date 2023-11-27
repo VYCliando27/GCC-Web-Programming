@@ -5,6 +5,7 @@ import HomePage from './components/homePage';
 import PlacesPage from './components/placesPage';
 import TourPage from './components/tourPage';
 import AboutPage from './components/aboutPage';
+import ThreeDimensional from './components/threeDimensional';
 import "./style/style.css";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/places" element={<PlacesPage />} />
           <Route path="/tour" element={<TourPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/three-dimensional" element={<ThreeDimensional />} />
         </Routes>
       </div>
     </Router>

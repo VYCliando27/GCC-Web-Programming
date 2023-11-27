@@ -1,9 +1,7 @@
-import React from 'react'
-
-export default function tourPage() {
-  return (
-    <div>
-      
-    </div>
-  )
+const TourPage = () => {
+    return (
+        <div>tes</div>
+    )
 }
+
+export default TourPage

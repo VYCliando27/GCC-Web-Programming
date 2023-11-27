@@ -9,7 +9,7 @@ const NavigationBar = () => {
                 <Nav className="fontNavLink">
                     <Nav.Link as={Link} to="/">Home</Nav.Link>
                     <Nav.Link as={Link} to="/places">Places</Nav.Link>
-                    <Nav.Link as={Link} to="/tour-guide">Tour Guide</Nav.Link>
+                    <Nav.Link as={Link} to="/tour">Tour Guide</Nav.Link>
                     <Nav.Link as={Link} to="/about">About</Nav.Link>
                 </Nav>
             </Container>
