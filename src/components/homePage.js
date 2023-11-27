@@ -1,18 +1,18 @@
-import { Container, Button } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import { Link } from 'react-router-dom';
 
 import facebook from '../assets/images/facebook_2504903.png'
 import instagram from '../assets/images/instagram_2111463.png'
-import slide1 from '../assets/images/slide1.png'
-import slide2 from '../assets/images/slide2.png'
-import slide3 from '../assets/images/slide3.png'
+import slide1 from '../assets/images/111.png'
+import slide2 from '../assets/images/courosel3.jpg'
+import slide3 from '../assets/images/333.jpeg'
 
 
 const HomePage = () => {
 
     
     return (
-        <div className="bgHome">
+
         <Container className="container-home">
 
             <div className="container1">
@@ -28,12 +28,18 @@ const HomePage = () => {
                 </div>
             </div>
             <div className="container2">
-                <img className="slide1" src={slide1} alt="lihat lebih banyak"  />
-                <img className="slide2" src={slide2} alt="lihat lebih banyak"  />
-                <img className="slide3" src={slide3} alt="lihat lebih banyak"  />
+                <Link to="/places">
+                    <img className="slide1" src={slide1} alt="lihat lebih banyak"  />
+                </Link>
+                <Link to="/places">
+                    <img className="slide2" src={slide2} alt="lihat lebih banyak"  />
+                </Link>
+                <Link to="/places">
+                    <img className="slide3" src={slide3} alt="lihat lebih banyak"  />
+                </Link>
             </div>
         </Container>
-        </div>
+
     )
 }
 

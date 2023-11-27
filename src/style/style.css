@@ -4,7 +4,7 @@
 
 .myBG {
     height: 100vh;
-    background: url("../assets/images/bg-web-wisata.png");
+    background: url("../assets/images/222.png");
     background-size: cover;
     overflow-y: hidden;
 }
@@ -18,8 +18,46 @@
 
 .navbar {
     background-color: hsla(0, 0%, 100%, 0.2);
-
 }
+
+.logo {
+    height: 40px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.5); /* Membesarkan logo sebesar 10% */
+  }
+
+.nav-link {
+    position: relative;
+    color: rgb(0, 0, 0); /* Sesuaikan warna teks dengan kebutuhan Anda */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* Animasi perubahan warna teks saat hover */
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0); /* Warna garis bawah */
+    transition: width 0.3s ease-in-out; /* Animasi lebar garis bawah saat hover */
+}
+
+.nav-link:hover {
+    color: #ffcc00; /* Warna teks saat hover */
+    box-shadow: #fff;
+}
+
+.nav-link:hover::before {
+    width: 100%; /* Lebar garis bawah saat hover */
+}
+
+
 
 .fontNavLink {
     font-family: 'kalam', 'cursive';
@@ -50,6 +88,7 @@
     font-size: 20px;
     line-height: 50px;
     text-shadow: 2px 2px rgb(224, 224, 224);
+    animation: fadeIn 1s ease-in-out; /* Menambahkan animasi fadeIn selama 1 detik */
 }
 
 .text2 {
@@ -58,19 +97,64 @@
     font-weight: 700;
     line-height: 50px;
     text-shadow: 2px 2px rgb(224, 224, 224);
+    animation: scaleUp 0.5s ease-in-out; /* Menambahkan animasi scaleUp selama 0.5 detik */
 }
 
 .text3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     text-shadow: 2px 2px rgb(224, 224, 224);
     font-weight: 900;
+    animation: rotateText 1s linear infinite; /* Menambahkan animasi rotateText secara terus-menerus */
 }
+
+/* Definisi animasi */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 
 .container-sosmed {
     margin-top: 20px;
 }
-
+.popup-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .popup:hover {
+    transform: scale(1.1);
+  }
+  
 .sosmed1 {
     width: 30px;
 }
@@ -88,23 +172,43 @@
 
 .slide1 {
     width: 190px;
-    height: 330px;
-    border-radius: 20px;
-    margin: 10px;    
-}
-
-.slide2 {
-    width: 160px;
     height: 300px;
     border-radius: 20px;
-    margin: 10px;    
+    margin: 15px;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.slide1:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(35, 37, 37, 1); 
+}
+
+
+
+.slide2 {
+    width: 190px;
+    height: 300px;
+    border-radius: 20px;
+    margin: 15px;    
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.slide2:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(35, 37, 37, 1); 
 }
 
 .slide3 {
-    width: 160px;
+    width: 190px;
     height: 300px;
     border-radius: 20px;
-    margin: 10px;    
+    margin: 15px;    
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.slide3:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 0 15px rgba(35, 37, 37, 1); 
 }
 
 .btn-home {
@@ -113,7 +217,34 @@
 }
 
 
+
 /* home-page end */
+
+/* places-page start */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Sesuaikan dengan kebutuhan Anda */
+    height: auto; /* Biarkan gambar menjaga rasio aspek */
+    max-height: 670px; /* Atur tinggi maksimum sesuai kebutuhan Anda */
+    padding: 50px;
+}
+
+.carousel-caption {
+    color: #fff; /* Contoh: Mengatur warna teks caption */
+    /* Tambahkan gaya teks lainnya sesuai kebutuhan Anda */
+}
+
+/* places-page end */
+
 
 /* CSS 3d object */
 .canvas-container {
@@ -124,3 +255,213 @@
 
 
 /* End CSS 3d Object */
+
+/* about-us */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background color */
+    color: #fff;
+    font-family: 'Montserrat', sans-serif; /* Assuming you're using Montserrat */
+    
+    padding: 70px 50px;
+    /* height: 100vh; */
+}
+
+.about-content {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+.about-content h2 {
+    font-size: 1.5em;
+    color: #aaa; /* Lighter grey for smaller heading */
+}
+
+.about-content h1 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.images-layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    padding: 0 50px;
+}
+
+.image-card {
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover {
+    box-shadow: 0 0 15px rgb(64, 176, 176); 
+    transform: rotate(0deg) scale(1.1);
+}
+
+.image-card span {
+    transform: rotate(-45deg);
+    display: block;
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.image-card-mid {
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-card-mid:hover {
+    transform: rotate(0deg) scale(1.1);
+    box-shadow: 0 0 15px rgb(64, 176, 176); 
+
+}
+
+.image-card-mid span {
+    transform: rotate(-45deg);
+    display: block;
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.additional-text {
+    transform: rotate(-45deg); /* Jika elemen induk terotasi */
+     /* Atau sesuaikan jaraknya */
+    font-size: 0.5em; /* Atau sesuaikan ukurannya */
+    color: white; /* Atau sesuaikan warnanya */
+    text-align: center; /* Untuk memusatkan teks */
+}
+
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 50px 20px;
+    }
+
+    .images-layout {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+}
+
+/* end about-us */
+
+/* Tour guide */
+.tour-guide-container {
+    color: white;
+    text-align: center;
+    background-size: cover;
+    padding: 50px;
+}
+
+.glass-effect {
+    backdrop-filter: blur(10px); /* Memberikan efek blur pada latar belakang */
+    background-color: rgba(255, 255, 255, 0.1); /* Warna latar belakang putih dengan transparansi */
+    border: 1px solid rgba(255, 255, 255, 0.25); /* Border tipis untuk menambahkan definisi */
+    border-radius: 10px; /* Membulatkan sudut */
+    padding: 20px; /* Spasi di dalam elemen */
+    /* ... styles lainnya */
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.content h1{
+    color: #333;
+}
+
+.content p{
+    color: #333;
+}
+
+.polygon {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-size: cover;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin: 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Animasi transisi */
+}
+
+.polygon:hover {
+    transform: scale(1.1); /* Membesarkan elemen saat di-hover */
+    z-index: 1; /* Pastikan elemen yang di-hover muncul di atas elemen lain */
+}
+
+.polygon .text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button-polygon {
+    display: inline-block;
+    margin: 20px;
+    background-color: #ffc107;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    width: 200px;
+    height: 200px;
+    line-height: 200px; /* Center text vertically */
+}
+
+.button-polygon button {
+    background: none;
+    border: none;
+    font-size: 1em;
+    color: #333;
+}
+
+.button-polygon:hover{
+    transform: scale(1.1);
+    background-color:green
+}
+  
+/* end Tour Guide */

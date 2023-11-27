@@ -6,15 +6,18 @@ Source: https://sketchfab.com/3d-models/cozy-lake-55d48e0250384ed9811c1567fd3fa7
 Title: Cozy Lake
 */
 
-import React, { useRef } from "react";
+import React, { useRef, useState} from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree} from '@react-three/fiber'
 import danauScene from '../assets/cozy_lake.glb'
 import { a } from '@react-spring/three'
 
-const Danau = (props) => {
+const Danau = ({onCloudClick}, props) => {
   const danauRef = useRef();
   const { nodes, materials } = useGLTF(danauScene);
+  const handleCloudClick = (cloudName) => {
+    onCloudClick(cloudName); // Kirim nama awan ke parent component
+  };
   return (
     <a.group ref={danauRef} {...props} >
       <group position={[31.11, 24.07, 9.98]} rotation={[-Math.PI / 2, 0, 0]}>
@@ -187,6 +190,14 @@ const Danau = (props) => {
           material={materials.Leaf_Red}
         />
       </group>
+      <mesh
+      position={[2, 50, 780]}
+      onClick={() => handleCloudClick('Cloud Info')}
+      onPointerOver={(e) => e.stopPropagation()} // Mencegah event pointer menyebar
+    >
+      <sphereGeometry args={[1, 32, 32]} /> {/* Ukuran bola */}
+      <meshStandardMaterial color="white" /> {/* Warna bola */}
+    </mesh>
       <group position={[-96.9, 18.22, 184.24]} rotation={[-Math.PI / 2, 0, 0]}>
         <mesh
           geometry={nodes.Tree_Dense_Yellow_Wood_0.geometry}
